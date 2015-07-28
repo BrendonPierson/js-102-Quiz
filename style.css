@@ -1,1 +1,7 @@
-style.css
+#numbers :nth-child(even){
+  color: red;
+}
+
+#numbers :nth-child(odd){
+  background-color: azure;
+}

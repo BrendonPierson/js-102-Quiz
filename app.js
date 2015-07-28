@@ -19,15 +19,26 @@
       wraps a <div> element around each number (e.g. output += something).
   
   13. Give each <div> a class of "number".
-  14. Write a CSS class that changes the font color of the even elements to red.
-  15. Write a CSS class that changes the background color of the odd elements to azure.
+  14. Write a CSS class that changes 
+      the font color of the even elements to red.
+
+  15. Write a CSS class that changes the 
+  background color of the odd elements to azure.
   
   16. Push all of your code to Github.
   17. Send the link to your Github project to your assigned TA.
 */
 var html = "";
+function compareNum(a,b) {
+    return a - b;
+}
+
 function sortArr(arr){
-  return arr.sort();
+  var returnArr = []
+  for (var i = 0; i < arr.length; i++) {
+    returnArr[i] = Number(arr[i]);
+  }
+  return returnArr.sort(compareNum);
 }
 
 function largerThan25(arr) {
@@ -41,8 +52,10 @@ function largerThan25(arr) {
 }
 
 $("#arrButton").click(function(){
+  html = '';
   var userArr = $('#userArr').val().split(',');
-  var newArr = sortArr(largerThan25(userArr));
+  var largeArr = largerThan25(userArr);
+  var newArr = sortArr(largeArr);
   for (var i = 0; i < newArr.length; i++) {
     html += '<div class="number">' + newArr[i] + "</div>";
   }
