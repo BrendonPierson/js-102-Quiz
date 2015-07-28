@@ -1,3 +1,10 @@
+#numbers {
+  font-size: 2em;
+  text-align: center;
+  border: 1px solid black;
+  padding: 1%;
+}
+
 #numbers :nth-child(even){
   color: red;
 }
