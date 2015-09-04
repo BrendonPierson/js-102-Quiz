@@ -6,7 +6,7 @@
 *Note: Ugly colors were part of the instructors assignment.*
 
 ###Topics Covered
-1.jQuery
+1. jQuery
 2. Comparison functions
 3. Array manipulation
 4. Sort functions
